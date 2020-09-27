@@ -318,6 +318,9 @@ RSpec/EmptyExampleGroup:
   Exclude:
     - spec/factories/**/*
 
+RSpec/EmptyLineAfterExample:
+  Enabled: true
+
 RSpec/EmptyLineAfterExampleGroup:
   Enabled: true
   Exclude:
