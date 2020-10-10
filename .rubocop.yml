@@ -369,6 +369,9 @@ Security/JSONLoad:
 Security/YAMLLoad:
   Enabled: true
 
+Style/AccessorGrouping:
+  Enabled: true
+
 Style/AndOr:
   Enabled: true
 
