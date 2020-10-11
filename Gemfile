@@ -103,7 +103,7 @@ group :development do
   gem "mdl", "~> 0.11.0", require: false
   gem "rubocop", "~> 0.83.0", require: false
   gem "rubocop-performance", "~> 1.7.1", require: false
-  gem "rubocop-rails", "~> 2.3.2", require: false
+  gem "rubocop-rails", "~> 2.6.0", require: false
   gem "rubocop-rspec", "~> 1.35.0", require: false
   gem "rvm1-capistrano3", "~> 1.4.0", require: false
   gem "scss_lint", "~> 0.59.0", require: false
