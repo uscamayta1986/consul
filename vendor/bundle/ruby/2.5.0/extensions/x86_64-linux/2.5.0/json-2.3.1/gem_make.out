@@ -1,0 +1,13 @@
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/json-2.3.1/ext/json
+/root/.rbenv/versions/2.5.8/bin/ruby -r ./siteconf20201020-15067-9pl3k4.rb extconf.rb
+creating Makefile
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/json-2.3.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/json-2.3.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/json-2.3.1/ext/json
+make "DESTDIR=" install

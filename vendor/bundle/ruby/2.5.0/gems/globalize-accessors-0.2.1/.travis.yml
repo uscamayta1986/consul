@@ -1,0 +1,10 @@
+language: ruby
+sudo: false
+cache: bundler
+before_script:
+  - "cp test/db/database.yml.travis test/db/database.yml"
+script: "bundle exec rake"
+rvm:
+  - 2.2
+  - 2.1
+  - 2.0.0

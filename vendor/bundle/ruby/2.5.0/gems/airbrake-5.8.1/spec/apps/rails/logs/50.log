@@ -1,0 +1,10 @@
+# Logfile created on 2017-01-17 16:22:50 +0200 by logger.rb/56815
+D, [2017-01-17T16:22:50.454065 #58967] DEBUG -- :   [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+D, [2017-01-17T16:22:50.459317 #58967] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "delayed_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "priority" integer DEFAULT 0 NOT NULL, "attempts" integer DEFAULT 0 NOT NULL, "handler" text NOT NULL, "last_error" text, "run_at" datetime, "locked_at" datetime, "failed_at" datetime, "locked_by" varchar, "queue" varchar, "created_at" datetime, "updated_at" datetime)[0m
+D, [2017-01-17T16:22:50.459830 #58967] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+D, [2017-01-17T16:22:50.460241 #58967] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")[0m
+D, [2017-01-17T16:22:50.464233 #58967] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2017-01-17T16:22:50.472323 #58967] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-01-17T16:22:50.477845 #58967] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2017-01-17T16:22:50.478687 #58967] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-01-17 14:22:50 UTC], ["updated_at", 2017-01-17 14:22:50 UTC]]
+D, [2017-01-17T16:22:50.478824 #58967] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m

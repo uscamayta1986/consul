@@ -1,0 +1,895 @@
+# Logfile created on 2017-01-17 16:23:35 +0200 by logger.rb/56815
+D, [2017-02-07T15:45:30.778124 #92197] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255)) [0m
+D, [2017-02-07T15:45:30.783520 #92197] DEBUG -- :   [1m[35m (0.1ms)[0m  CREATE TABLE "delayed_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "priority" integer DEFAULT 0 NOT NULL, "attempts" integer DEFAULT 0 NOT NULL, "handler" text NOT NULL, "last_error" text, "run_at" datetime, "locked_at" datetime, "failed_at" datetime, "locked_by" varchar(255), "queue" varchar(255), "created_at" datetime, "updated_at" datetime) 
+D, [2017-02-07T15:45:30.783975 #92197] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")[0m
+I, [2017-02-07T15:45:30.811011 #92197]  INFO -- : Started GET "/resque" for 127.0.0.1 at 2017-02-07 15:45:30 +0000
+I, [2017-02-07T15:45:30.815343 #92197]  INFO -- : Processing by DummyController#resque as HTML
+I, [2017-02-07T15:45:30.833891 #92197]  INFO -- :   Rendered dummy/resque.html.erb within layouts/application (1.1ms)
+I, [2017-02-07T15:45:30.834321 #92197]  INFO -- : Completed 200 OK in 19ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:30.837005 #92197]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:30 +0000
+I, [2017-02-07T15:45:30.849197 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:30.849241 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:30.849494 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:30.853012 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:30.968430 #92197]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:30 +0000
+I, [2017-02-07T15:45:30.969383 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:30.969424 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:30.969726 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:30.985534 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:30.987208 #92197]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:30 +0000
+I, [2017-02-07T15:45:30.988101 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:30.988141 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:30.988356 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:30.991545 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.099421 #92197]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.100421 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.100462 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.100768 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.110776 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.113029 #92197]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.113952 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.113994 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.114221 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.117182 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.221439 #92197]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.222538 #92197]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T15:45:31.222587 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.226598 #92197]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.3ms)
+I, [2017-02-07T15:45:31.233583 #92197]  INFO -- : Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.235842 #92197]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.236575 #92197]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T15:45:31.236603 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.240237 #92197]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.240491 #92197]  INFO -- : Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.348789 #92197]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.349801 #92197]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T15:45:31.349838 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.360255 #92197]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.360536 #92197]  INFO -- : Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.362960 #92197]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.363790 #92197]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T15:45:31.363820 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.368685 #92197]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.3ms)
+I, [2017-02-07T15:45:31.369072 #92197]  INFO -- : Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.474970 #92197]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.475776 #92197]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T15:45:31.475841 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.486176 #92197]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.3ms)
+I, [2017-02-07T15:45:31.486642 #92197]  INFO -- : Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.489432 #92197]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.490282 #92197]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T15:45:31.490311 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.501428 #92197]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.501796 #92197]  INFO -- : Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.505399 #92197]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.506818 #92197]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T15:45:31.506892 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.518502 #92197]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.3ms)
+I, [2017-02-07T15:45:31.518954 #92197]  INFO -- : Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.521393 #92197]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.522062 #92197]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T15:45:31.522101 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.531914 #92197]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.532221 #92197]  INFO -- : Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.534590 #92197]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.535465 #92197]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T15:45:31.535505 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.546377 #92197]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.546669 #92197]  INFO -- : Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.548965 #92197]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.549861 #92197]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T15:45:31.549912 #92197]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T15:45:31.561769 #92197]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.562101 #92197]  INFO -- : Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:31.571487 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.572747 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.573006 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.576599 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.683747 #92197]  INFO -- : Started GET "/active_record_after_rollback" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.684673 #92197]  INFO -- : Processing by DummyController#active_record_after_rollback as HTML
+D, [2017-02-07T15:45:31.685093 #92197] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-02-07T15:45:31.691589 #92197] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("title") VALUES (?)[0m  [["title", "Bango"]]
+D, [2017-02-07T15:45:31.691792 #92197] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+E, [2017-02-07T15:45:31.709135 #92197] ERROR -- : after_rollback (AirbrakeTestError)
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:52:in `raise_error_after_rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:375:in `_run__332598288809653474__rollback__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rails/active_record.rb:27:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:306:in `rolledback!'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:136:in `block in rollback_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:134:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:134:in `rollback_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:176:in `perform_rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:114:in `rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:241:in `rollback_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `rescue in within_new_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:222:in `within_new_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:203:in `transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:209:in `transaction'
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:126:in `active_record_after_rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__4135322220588271211__process_action__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:136:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:231:in `block in action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:50:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:676:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:35:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `catch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/etag.rb:23:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/query_cache.rb:36:in `call'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rack/middleware.rb:51:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__1527824982088487257__call__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:22:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/static.rb:84:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/engine.rb:511:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/application.rb:97:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/mock_session.rb:30:in `request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:244:in `process_request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:58:in `get'
+/Users/kyrylo/.rubies/ruby-2.3.3/lib/ruby/2.3.0/forwardable.rb:189:in `get'
+/Users/kyrylo/Code/airbrake/airbrake/spec/integration/rails/rails_spec.rb:113:in `block (3 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-wait-0.0.9/lib/rspec/wait.rb:46:in `block (2 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+I, [2017-02-07T15:45:31.710245 #92197]  INFO -- :   Rendered dummy/active_record_after_rollback.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.710533 #92197]  INFO -- : Completed 200 OK in 26ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+I, [2017-02-07T15:45:31.712607 #92197]  INFO -- : Started GET "/active_record_after_commit" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.713430 #92197]  INFO -- : Processing by DummyController#active_record_after_commit as HTML
+D, [2017-02-07T15:45:31.713742 #92197] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2017-02-07T15:45:31.714173 #92197] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("title") VALUES (?)  [["title", "Bingo"]]
+D, [2017-02-07T15:45:31.714329 #92197] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+E, [2017-02-07T15:45:31.716790 #92197] ERROR -- : after_commit (AirbrakeTestError)
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:48:in `raise_error_after_commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:375:in `_run__332598288809653474__commit__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rails/active_record.rb:27:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:298:in `committed!'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:147:in `block in commit_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:145:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:145:in `commit_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:181:in `perform_commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:120:in `commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:237:in `commit_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:217:in `within_new_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:203:in `transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:209:in `transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:327:in `with_transaction_returning_status'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:270:in `block in save'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:285:in `rollback_active_record_state!'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:269:in `save'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/persistence.rb:34:in `create'
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:122:in `active_record_after_commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__4135322220588271211__process_action__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:136:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:231:in `block in action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:50:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:676:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:35:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `catch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/etag.rb:23:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/query_cache.rb:36:in `call'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rack/middleware.rb:51:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__1527824982088487257__call__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:22:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/static.rb:84:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/engine.rb:511:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/application.rb:97:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/mock_session.rb:30:in `request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:244:in `process_request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:58:in `get'
+/Users/kyrylo/.rubies/ruby-2.3.3/lib/ruby/2.3.0/forwardable.rb:189:in `get'
+/Users/kyrylo/Code/airbrake/airbrake/spec/integration/rails/rails_spec.rb:106:in `block (3 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-wait-0.0.9/lib/rspec/wait.rb:46:in `block (2 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+I, [2017-02-07T15:45:31.726094 #92197]  INFO -- :   Rendered dummy/active_record_after_commit.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:31.726476 #92197]  INFO -- : Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+I, [2017-02-07T15:45:31.729730 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.730607 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.730991 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.734859 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.744784 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.745401 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.745606 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.749301 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.855638 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.856331 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.856591 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.867199 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.870014 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.870768 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.871162 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.877825 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.983372 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.984187 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:31.984575 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:31.995918 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:31.997849 #92197]  INFO -- : Started GET "/delayed_job" for 127.0.0.1 at 2017-02-07 15:45:31 +0000
+I, [2017-02-07T15:45:31.998535 #92197]  INFO -- : Processing by DummyController#delayed_job as HTML
+I, [2017-02-07T15:45:32.007965 #92197]  INFO -- : Completed 500 Internal Server Error in 9ms
+F, [2017-02-07T15:45:32.018398 #92197] FATAL -- : 
+AirbrakeTestError (delayed_job error):
+  lib/airbrake/delayed_job/plugin.rb:11:in `block (2 levels) in <class:Airbrake>'
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:36.036379 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:36 +0000
+I, [2017-02-07T15:45:36.037625 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:36.037965 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:36.048419 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:36.050390 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:36 +0000
+I, [2017-02-07T15:45:36.051053 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:36.051259 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:36.054101 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:36.161231 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:36 +0000
+I, [2017-02-07T15:45:36.162063 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:36.162434 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:36.173439 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T15:45:36.175587 #92197]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-02-07 15:45:36 +0000
+I, [2017-02-07T15:45:36.176333 #92197]  INFO -- : Processing by DummyController#index as HTML
+I, [2017-02-07T15:45:36.177246 #92197]  INFO -- :   Rendered dummy/index.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T15:45:36.177522 #92197]  INFO -- : Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T15:45:36.178734 #92197]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 15:45:36 +0000
+I, [2017-02-07T15:45:36.179150 #92197]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T15:45:36.179367 #92197]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T15:45:36.182131 #92197] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+D, [2017-02-07T16:47:53.147272 #93132] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255)) [0m
+D, [2017-02-07T16:47:53.152052 #93132] DEBUG -- :   [1m[35m (0.2ms)[0m  CREATE TABLE "delayed_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "priority" integer DEFAULT 0 NOT NULL, "attempts" integer DEFAULT 0 NOT NULL, "handler" text NOT NULL, "last_error" text, "run_at" datetime, "locked_at" datetime, "failed_at" datetime, "locked_by" varchar(255), "queue" varchar(255), "created_at" datetime, "updated_at" datetime) 
+D, [2017-02-07T16:47:53.152448 #93132] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")[0m
+I, [2017-02-07T16:47:58.525452 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.529383 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:58.529714 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:58.539822 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:58.548345 #93132]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.549467 #93132]  INFO -- : Processing by DummyController#index as HTML
+I, [2017-02-07T16:47:58.555748 #93132]  INFO -- :   Rendered dummy/index.html.erb within layouts/application (0.8ms)
+I, [2017-02-07T16:47:58.556124 #93132]  INFO -- : Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:58.557582 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.558148 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:58.558444 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:58.561829 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:58.686161 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.686955 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:58.687269 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:58.702682 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:58.704875 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.705665 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:58.705943 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:58.710118 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:58.816571 #93132]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.817607 #93132]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T16:47:58.817642 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:58.830220 #93132]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:58.830555 #93132]  INFO -- : Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:58.833026 #93132]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.833810 #93132]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T16:47:58.833838 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:58.837428 #93132]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:58.837705 #93132]  INFO -- : Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:58.943704 #93132]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.944681 #93132]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T16:47:58.944711 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:58.958483 #93132]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.4ms)
+I, [2017-02-07T16:47:58.958719 #93132]  INFO -- : Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:58.961190 #93132]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:58 +0000
+I, [2017-02-07T16:47:58.961985 #93132]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T16:47:58.962014 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:58.966176 #93132]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:58.966675 #93132]  INFO -- : Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.075451 #93132]  INFO -- : Started GET "/notify_airbrake_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.076516 #93132]  INFO -- : Processing by DummyController#notify_airbrake_helper as HTML
+I, [2017-02-07T16:47:59.076581 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.090908 #93132]  INFO -- :   Rendered dummy/notify_airbrake_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.091319 #93132]  INFO -- : Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.093962 #93132]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.094853 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.094888 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.095096 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.105830 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.113938 #93132]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.114717 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.114746 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.114958 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.118323 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.225007 #93132]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.226337 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.226378 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.226649 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.237594 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.239463 #93132]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.240141 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.240168 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.240393 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.243364 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.350459 #93132]  INFO -- : Started GET "/crash?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.351475 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.351517 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.351790 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.362005 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.364129 #93132]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.365089 #93132]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T16:47:59.365124 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.376096 #93132]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.376465 #93132]  INFO -- : Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.378981 #93132]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.379820 #93132]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T16:47:59.379849 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.392637 #93132]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.392866 #93132]  INFO -- : Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.395040 #93132]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.395878 #93132]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T16:47:59.395909 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.405606 #93132]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.405933 #93132]  INFO -- : Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.408559 #93132]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.409313 #93132]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T16:47:59.409346 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.420688 #93132]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.421024 #93132]  INFO -- : Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.423596 #93132]  INFO -- : Started GET "/notify_airbrake_sync_helper?foo=bar" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.424551 #93132]  INFO -- : Processing by DummyController#notify_airbrake_sync_helper as HTML
+I, [2017-02-07T16:47:59.424589 #93132]  INFO -- :   Parameters: {"foo"=>"bar"}
+I, [2017-02-07T16:47:59.434631 #93132]  INFO -- :   Rendered dummy/notify_airbrake_sync_helper.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.434874 #93132]  INFO -- : Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.437371 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.437945 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.438155 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.441341 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.549079 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.549877 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.550169 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.560947 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.562712 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.563315 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.563529 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.566426 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.674403 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.675350 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.675673 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.689201 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.691123 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.691830 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.692066 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.694981 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.803297 #93132]  INFO -- : Started GET "/active_record_after_commit" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.804181 #93132]  INFO -- : Processing by DummyController#active_record_after_commit as HTML
+D, [2017-02-07T16:47:59.806825 #93132] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-02-07T16:47:59.809476 #93132] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "books" ("title") VALUES (?)[0m  [["title", "Bingo"]]
+D, [2017-02-07T16:47:59.809691 #93132] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+E, [2017-02-07T16:47:59.812702 #93132] ERROR -- : after_commit (AirbrakeTestError)
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:48:in `raise_error_after_commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:375:in `_run__1711563972185349535__commit__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rails/active_record.rb:27:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:298:in `committed!'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:147:in `block in commit_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:145:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:145:in `commit_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:181:in `perform_commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:120:in `commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:237:in `commit_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:217:in `within_new_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:203:in `transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:209:in `transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:327:in `with_transaction_returning_status'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:270:in `block in save'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:285:in `rollback_active_record_state!'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:269:in `save'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/persistence.rb:34:in `create'
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:122:in `active_record_after_commit'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__142644714982089778__process_action__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:136:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:231:in `block in action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:50:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:676:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:35:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `catch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/etag.rb:23:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/query_cache.rb:36:in `call'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rack/middleware.rb:51:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__361703762424254094__call__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:22:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/static.rb:84:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/engine.rb:511:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/application.rb:97:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/mock_session.rb:30:in `request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:244:in `process_request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:58:in `get'
+/Users/kyrylo/.rubies/ruby-2.3.3/lib/ruby/2.3.0/forwardable.rb:189:in `get'
+/Users/kyrylo/Code/airbrake/airbrake/spec/integration/rails/rails_spec.rb:106:in `block (3 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-wait-0.0.9/lib/rspec/wait.rb:46:in `block (2 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+I, [2017-02-07T16:47:59.820241 #93132]  INFO -- :   Rendered dummy/active_record_after_commit.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.820485 #93132]  INFO -- : Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+I, [2017-02-07T16:47:59.822259 #93132]  INFO -- : Started GET "/active_record_after_rollback" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.822924 #93132]  INFO -- : Processing by DummyController#active_record_after_rollback as HTML
+D, [2017-02-07T16:47:59.823128 #93132] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2017-02-07T16:47:59.823736 #93132] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "books" ("title") VALUES (?)  [["title", "Bango"]]
+D, [2017-02-07T16:47:59.823926 #93132] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+E, [2017-02-07T16:47:59.828437 #93132] ERROR -- : after_rollback (AirbrakeTestError)
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:52:in `raise_error_after_rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:375:in `_run__1711563972185349535__rollback__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rails/active_record.rb:27:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:306:in `rolledback!'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:136:in `block in rollback_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:134:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:134:in `rollback_records'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:176:in `perform_rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/transaction.rb:114:in `rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:241:in `rollback_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `rescue in within_new_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:222:in `within_new_transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/database_statements.rb:203:in `transaction'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/transactions.rb:209:in `transaction'
+/Users/kyrylo/Code/airbrake/airbrake/spec/apps/rails/dummy_app.rb:126:in `active_record_after_rollback'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__142644714982089778__process_action__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/notifications.rb:159:in `instrument'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/base.rb:136:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_controller/metal.rb:231:in `block in action'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:50:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/routing/route_set.rb:676:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:35:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `catch'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/warden-1.2.6/lib/warden/manager.rb:34:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/etag.rb:23:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/query_cache.rb:36:in `call'
+/Users/kyrylo/Code/airbrake/airbrake/lib/airbrake/rack/middleware.rb:51:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activerecord-4.0.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:373:in `_run__361703762424254094__call__callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/rack/logger.rb:22:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/activesupport-4.0.13/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/actionpack-4.0.13/lib/action_dispatch/middleware/static.rb:84:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/engine.rb:511:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/railties-4.0.13/lib/rails/application.rb:97:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/mock_session.rb:30:in `request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:244:in `process_request'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rack-test-0.6.3/lib/rack/test.rb:58:in `get'
+/Users/kyrylo/.rubies/ruby-2.3.3/lib/ruby/2.3.0/forwardable.rb:189:in `get'
+/Users/kyrylo/Code/airbrake/airbrake/spec/integration/rails/rails_spec.rb:113:in `block (3 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-wait-0.0.9/lib/rspec/wait.rb:46:in `block (2 levels) in <top (required)>'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/kyrylo/.gem/ruby/2.3.3/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+I, [2017-02-07T16:47:59.839926 #93132]  INFO -- :   Rendered dummy/active_record_after_rollback.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.840158 #93132]  INFO -- : Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+I, [2017-02-07T16:47:59.852296 #93132]  INFO -- : Started GET "/crash" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.853543 #93132]  INFO -- : Processing by DummyController#crash as HTML
+I, [2017-02-07T16:47:59.853796 #93132]  INFO -- : Completed 500 Internal Server Error in 0ms
+F, [2017-02-07T16:47:59.857269 #93132] FATAL -- : 
+AirbrakeTestError (AirbrakeTestError):
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+
+I, [2017-02-07T16:47:59.965867 #93132]  INFO -- : Started GET "/resque" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.966774 #93132]  INFO -- : Processing by DummyController#resque as HTML
+I, [2017-02-07T16:47:59.979449 #93132]  INFO -- :   Rendered dummy/resque.html.erb within layouts/application (0.2ms)
+I, [2017-02-07T16:47:59.979701 #93132]  INFO -- : Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+I, [2017-02-07T16:47:59.981945 #93132]  INFO -- : Started GET "/delayed_job" for 127.0.0.1 at 2017-02-07 16:47:59 +0000
+I, [2017-02-07T16:47:59.982645 #93132]  INFO -- : Processing by DummyController#delayed_job as HTML
+I, [2017-02-07T16:47:59.995353 #93132]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2017-02-07T16:47:59.998913 #93132] FATAL -- : 
+AirbrakeTestError (delayed_job error):
+  lib/airbrake/delayed_job/plugin.rb:11:in `block (2 levels) in <class:Airbrake>'
+  lib/airbrake/rack/middleware.rb:51:in `call'
+
+

@@ -1,0 +1,15 @@
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/root/.rbenv/versions/2.5.8/bin/ruby -r ./siteconf20201020-15067-ulwvpj.rb extconf.rb
+creating Makefile
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20201020-15067-pielqz/skiptrace/internal

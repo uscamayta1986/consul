@@ -1,0 +1,19 @@
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/rinku-2.0.6/ext/rinku
+/root/.rbenv/versions/2.5.8/bin/ruby -r ./siteconf20201020-15067-r462u2.rb extconf.rb
+creating Makefile
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/rinku-2.0.6/ext/rinku
+make "DESTDIR=" clean
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/rinku-2.0.6/ext/rinku
+make "DESTDIR="
+compiling autolink.c
+compiling buffer.c
+compiling rinku.c
+compiling rinku_rb.c
+compiling utf8.c
+linking shared-object rinku.so
+
+current directory: /home/consulfork/consul/vendor/bundle/ruby/2.5.0/gems/rinku-2.0.6/ext/rinku
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rinku.so ./.gem.20201020-15067-1mhp2rp

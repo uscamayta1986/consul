@@ -1,0 +1,17 @@
+LineLength:
+  Max: 130
+
+MethodLength:
+  Max: 20
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+AllCops:
+  TargetRubyVersion: 2.2
+
+EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Documentation:
+  Enabled: false
