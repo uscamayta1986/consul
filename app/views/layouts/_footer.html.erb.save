@@ -1,0 +1,157 @@
+<footer>
+li {
+    font-size: inherit;
+}
+<style>
+.socialx {
+    width: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    right: 0;
+}
+.socialx ul {
+    margin-bottom: 3rem !important;
+    -webkit-transform: translate(-83px, 0);
+    -moz-transform: translate(-83px, 0);
+    -ms-transform: translate(-83px, 0);
+    -o-transform: translate(-83px, 0);
+    transform: translate(-83px, 0);
+}
+ul {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+}
+ul, ol, dl {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    list-style-position: outside;
+}
+.socialx ul li {
+    display: block;
+    margin: 5px;
+    background: rgba(0,0,0,0.36);
+    width: 300px;
+    text-align: left;
+    padding: 10px;
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    border-radius: 30px 0 0 30px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+li {
+    font-size: inherit;
+}
+
+</style>
+
+
+  <div class="row">
+    <div class="small-12 large-4 column">
+      <h1 class="logo">
+        <%= link_to t("layouts.header.open_gov"), root_path %>
+      </h1>
+
+      <p class="info">
+        <%= sanitize(t("layouts.footer.description",
+          open_source: link_to(t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank", rel: "nofollow"),
+          consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank", rel: "nofollow"))) %>
+        <%= t("layouts.footer.contact_us") %>
+      </p>
+    </div>
+
+    <div class="footer-sections small-12 large-8 column">
+      <div class="small-12 medium-4 column">
+        <%= link_to t("layouts.footer.participation_title"), root_path, class: "title" %>
+        <p><%= t("layouts.footer.participation_text") %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subfooter row">
+    <div class="small-12 medium-8 column">
+      <%= t("layouts.footer.copyright", year: Time.current.year) %>&nbsp;|
+      <ul class="no-bullet inline-block">
+        <li class="inline-block"><%= link_to t("layouts.footer.privacy"), page_path("privacy") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("conditions") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("accessibility") %></li>
+      </ul>
+    </div>
+<nav class="socialx">
+	<ul>
+      <li class="active">
+        <a target="_blank" title="Ir a la página de Twitter de Decide La Libertad (se abre en ventana nueva)" href="https://twitter.com/@decidelibertad">
+          <i class="fa fa-twitter"></i> Twitter
+</a>      </li>
+      <li class="">
+        <a target="_blank" title="Ir a la página de Facebook de Decide La Libertad (se abre en ventana nueva)" href="https://www.facebook.com/Decide-La-Libertad-Perú-1366157266819500/?modal=admin_todo_tour/">
+          <i class="fa fa-facebook"></i> Facebook
+</a>      </li>
+      <li class="">
+        <a target="_blank" title="Ir a la página de YouTube de Decide La Libertad (se abre en ventana nueva)" href="https://www.youtube.com/channel/UCzw-nTb1STfNGgD_CkfEwzw">
+          <i class="fa fa-youtube"></i> YouTube
+</a>      </li>
+      <li class="">
+        <a target="_blank" title="Ir a la página de Instagram de Decide La Libertad (se abre en ventana nueva)" href="https://instagram.com/decidelalibertad">
+          <i class="fa fa-instagram"></i> Instagram
+</a>      </li>
+  </ul>
+</nav>
+    <div class="small-12 medium-4 column social">
+      <div class="text-right">
+        <ul>
+          <% if setting["twitter_handle"] %>
+            <li class="inline-block">
+              <%= link_to "https://twitter.com/#{setting["twitter_handle"]}", target: "_blank",
+                           title: t("shared.go_to_page") + t("social.twitter", org: setting["org_name"]) + t("shared.target_blank") do %>
+                              <span class="show-for-sr"><%= t("social.twitter", org: setting["org_name"]) %></span>
+                              <span class="icon-twitter" aria-hidden="true"></span>
+              <% end %>
+            </li>
+          <% end %>
+          <% if setting["facebook_handle"] %>
+            <li class="inline-block">
+              <%= link_to "https://www.facebook.com/#{setting["facebook_handle"]}/", target: "_blank",
+                          title: t("shared.go_to_page") + t("social.facebook", org: setting["org_name"]) + t("shared.target_blank") do %>
+                          <span class="show-for-sr"><%= t("social.facebook", org: setting["org_name"]) %></span>
+                          <span class="icon-facebook" aria-hidden="true"></span>
+              <% end %>
+            </li>
+          <% end %>
+          <% if setting["youtube_handle"] %>
+            <li class="inline-block">
+              <%= link_to "https://www.youtube.com/#{setting["youtube_handle"]}", target: "_blank",
+                          title: t("shared.go_to_page") + t("social.youtube", org: setting["org_name"]) + t("shared.target_blank") do %>
+                          <span class="show-for-sr"><%= t("social.youtube", org: setting["org_name"]) %></span>
+                          <span class="icon-youtube" aria-hidden="true"></span>
+              <% end %>
+            </li>
+          <% end %>
+          <% if setting["telegram_handle"] %>
+            <li class="inline-block">
+              <%= link_to "https://www.telegram.me/#{setting["telegram_handle"]}", target: "_blank",
+                          title: t("shared.go_to_page") + t("social.telegram", org: setting["org_name"]) + t("shared.target_blank") do %>
+                          <span class="show-for-sr"><%= t("social.telegram", org: setting["org_name"]) %></span>
+                          <span class="icon-telegram" aria-hidden="true"></span>
+              <% end %>
+            </li>
+          <% end %>
+          <% if setting["instagram_handle"] %>
+            <li class="inline-block">
+              <%= link_to "https://www.instagram.com/#{setting["instagram_handle"]}", target: "_blank",
+                          title: t("shared.go_to_page") + t("social.instagram", org: setting["org_name"]) + t("shared.target_blank") do %>
+                          <span class="show-for-sr"><%= t("social.instagram", org: setting["org_name"]) %></span>
+                          <span class="icon-instagram" aria-hidden="true"></span>
+              <% end %>
+            </li>
+          <% end %>
+          <%= raw content_block("footer", I18n.locale) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
